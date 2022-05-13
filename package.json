@@ -55,7 +55,8 @@
     "xhr2-cookies": "^0.9.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev":"react-scripts start",
+    "start": "serve -s build ",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -78,7 +79,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://mern-moviebooking.herokuapp.com",
+  "proxy": "https://mern-moviebooking.herokuapp.com/",
   "devDependencies": {
     "dotenv-webpack": "^7.1.0"
   }
