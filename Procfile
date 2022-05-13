@@ -1,1 +1,1 @@
-web: frontend/index.js
+web: react-scripts start
