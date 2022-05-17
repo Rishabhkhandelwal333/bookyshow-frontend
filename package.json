@@ -52,7 +52,8 @@
     "web-vitals": "^2.1.4",
     "webfontloader": "^1.6.28",
     "webpack": "^5.72.1",
-    "xhr2-cookies": "^0.9.1"
+    "xhr2-cookies": "^0.9.1",
+    "dotenv-webpack": "^7.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
