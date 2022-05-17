@@ -1,1 +1,1 @@
-web: node build/index.html
+web: node public/index.html
