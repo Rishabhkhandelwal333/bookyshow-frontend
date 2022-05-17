@@ -37,9 +37,9 @@ export const getMovie = (keyword = "", currentPage = 1, price = [0, 500], catego
         dispatch({
             type: ALL_MOVIE_REQUEST
         });
-        let link = `/api/v1/movies?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&ratings[gte]=${ratings}`;
+        let link = `https://mern-moviebooking.herokuapp.com/api/v1/movies?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&ratings[gte]=${ratings}`;
         if (category) {
-            link = `/api/v1/movies?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&genre=${category}&ratings[gte]=${ratings}`;
+            link = `https://mern-moviebooking.herokuapp.com/api/v1/movies?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&genre=${category}&ratings[gte]=${ratings}`;
         }
         const { data } = await axios.get(link);
 
@@ -63,7 +63,7 @@ export const getMovieDetails = (id) => async (dispatch) => {
         dispatch({
             type: MOVIE_DETAILS_REQUEST
         });
-        const { data } = await axios.get(`/api/v1/movie/${id}`);
+        const { data } = await axios.get(`https://mern-moviebooking.herokuapp.com/api/v1/movie/${id}`);
         console.log(data);
 
         dispatch({
@@ -91,7 +91,7 @@ export const newReview = (reviewData) => async (dispatch) => {
         const config = {
             headers: { "Content-Type": "application/json" },
         };
-        const { data } = await axios.put(`/api/v1/review`, reviewData, config);
+        const { data } = await axios.put(`https://mern-moviebooking.herokuapp.com/api/v1/review`, reviewData, config);
 
 
 
@@ -114,7 +114,7 @@ export const newReview = (reviewData) => async (dispatch) => {
 export const getAdminMovie = () => async (dispatch) => {
     try {
         dispatch({ type: ADMIN_MOVIE_REQUEST });
-        const { data } = await axios.get("/api/v1/admin/movies");
+        const { data } = await axios.get("https://mern-moviebooking.herokuapp.com/api/v1/admin/movies");
 
         dispatch({
             type: ADMIN_MOVIE_SUCCESS,
@@ -143,7 +143,7 @@ export const createMovie = (movieData) => async (dispatch) => {
         const config = {
             headers: { "Content-Type": "application/json" },
         };
-        const { data } = await axios.post(`/api/v1/admin/movie/new`, movieData, config);
+        const { data } = await axios.post(`https://mern-moviebooking.herokuapp.com/api/v1/admin/movie/new`, movieData, config);
 
 
 
@@ -171,7 +171,7 @@ export const deleteMovie = (id) => async (dispatch) => {
         });
 
 
-        const { data } = await axios.delete(`/api/v1/admin/movie/${id}`);
+        const { data } = await axios.delete(`https://mern-moviebooking.herokuapp.com/api/v1/admin/movie/${id}`);
 
 
         dispatch({
@@ -199,7 +199,7 @@ export const updateMovie = (id,movieData) => async (dispatch) => {
         const config = {
             headers: { "Content-Type": "application/json" },
         };
-        const { data } = await axios.put(`/api/v1/admin/movie/${id}`, movieData, config);
+        const { data } = await axios.put(`https://mern-moviebooking.herokuapp.com/api/v1/admin/movie/${id}`, movieData, config);
 
 
 
@@ -226,7 +226,7 @@ export const getAllReviews = (id) => async (dispatch) => {
         });
 
       
-        const { data } = await axios.get(`/api/v1/reviews?movieId=${id}`);
+        const { data } = await axios.get(`https://mern-moviebooking.herokuapp.com/api/v1/reviews?movieId=${id}`);
 
 
 
@@ -253,7 +253,7 @@ export const deleteReviews = (reviewId,movieId) => async (dispatch) => {
         });
 
       
-        const { data } = await axios.delete(`/api/v1/reviews?id=${reviewId}&movieId=${movieId}`);
+        const { data } = await axios.delete(`https://mern-moviebooking.herokuapp.com/api/v1/reviews?id=${reviewId}&movieId=${movieId}`);
 
         dispatch({
             type: DELETE_REVIEW_SUCCESS,

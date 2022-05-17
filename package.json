@@ -78,8 +78,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://mern-moviebooking.herokuapp.com",
+  "proxy": "https://onlinemoviebooking-backend.herokuapp.com",
   "devDependencies": {
     "dotenv-webpack": "^7.1.0"
-  }
+    }
 }

@@ -78,7 +78,8 @@ window.addEventListener("contextmenu",(e)=> e.preventDefault());
     
     <Route exact path="/movies" element={<Movies/>}/>
 
-    {isAuthenticated && <Route   path="/account" element={<Profile/>}/>}
+    
+    {isAuthenticated && <Route  exact path="/account" element={<Profile/>}/>}
     
     {isAuthenticated && <Route  exact path="/me/update" element={<UpdateProfile/>}/>}
     
@@ -138,6 +139,8 @@ window.addEventListener("contextmenu",(e)=> e.preventDefault());
     
        
     
+
+    
     <Route  exact path="/password/forgot" element={<ForgotPassword/>}/>
     
     <Route  exact path="/password/reset/:token" element={<ResetPassword/>}/>
@@ -147,6 +150,7 @@ window.addEventListener("contextmenu",(e)=> e.preventDefault());
     <Route exact path="/login" element={<LoginSignUp/>}/>
 
     <Route exact path="/cart" element={<Cart/>}/>
+
 
 
     </Routes>
