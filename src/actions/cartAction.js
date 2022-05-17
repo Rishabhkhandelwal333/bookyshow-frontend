@@ -5,7 +5,7 @@ import axios from "axios";
 
 export const addItemsToCart = (id,quantity) => async(dispatch,getState)=>{
     
-       const {data} = await axios.get(`https://mern-moviebooking.herokuapp.com/api/v1/movie/${id}`);
+       const {data} = await axios.get(`https://onlinemoviebooking-backend.herokuapp.com/api/v1/movie/${id}`);
 
         dispatch({
             type:ADD_TO_CART

@@ -23,7 +23,6 @@ import Shipping from './component/Cart/Shipping.js'
 import ConfirmOrder from './component/Cart/ConfirmOrder.js'
 import Payment from './component/Cart/Payment.js'
 import {Elements} from '@stripe/react-stripe-js'
-import {loadStripe} from '@stripe/stripe-js';
 import OrderSuccess from './component/Cart/OrderSucess.js'
 import MyOrders from './component/Order/MyOrders'
 import OrderDetails from './component/Order/OrderDetails.js'
@@ -36,6 +35,10 @@ import ProcessOrder from './component/admin/ProcessOrder.js'
 import UsersList from './component/admin/UsersList.js'
 import UpdateUser from './component/admin/UpdateUser.js'
 import MovieReviews from './component/admin/MovieReviews.js'
+
+import {loadStripe} from '@stripe/stripe-js/pure';
+
+loadStripe.setLoadParameters({advancedFraudSignals: false})
 
 function App() {
 
@@ -79,7 +82,7 @@ window.addEventListener("contextmenu",(e)=> e.preventDefault());
     <Route exact path="/movies" element={<Movies/>}/>
 
     
-    {isAuthenticated && <Route  exact path="/account" element={<Profile/>}/>}
+    {isAuthenticated && <Route  path="/account" element={<Profile/>}/>}
     
     {isAuthenticated && <Route  exact path="/me/update" element={<UpdateProfile/>}/>}
     

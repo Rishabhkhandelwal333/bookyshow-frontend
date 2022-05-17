@@ -69,7 +69,6 @@ const LoginSignUp = ({  }) => {
     }
   };
 
-  const redirect =  "/account";
 
   useEffect(() => {
     if (error) {
@@ -80,7 +79,7 @@ const LoginSignUp = ({  }) => {
     if (isAuthenticated) {
       window.location.href = "/account";
     }
-  }, [dispatch, error, alert, isAuthenticated, redirect]);
+  }, [dispatch, error, alert, isAuthenticated]);
 
   const switchTabs = (e, tab) => {
     if (tab === "login") {
