@@ -57,7 +57,7 @@ useEffect(()=>{
   
   store.dispatch(loadUser());
  
-},[isAuthenticated,user]);
+},[]);
 
 window.addEventListener("contextmenu",(e)=> e.preventDefault());
 
