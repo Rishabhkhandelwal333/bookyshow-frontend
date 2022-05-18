@@ -47,10 +47,6 @@ function App() {
   );
 
    let key = "pk_test_51KvllCSCZua1qhgcr4oYLsQWMb0DjnCswwyZBX6e7ZUJa4lq1tlWNaPzAqJvUFLOuA0Uxpb2L4CW2TPHGcaLKvAS00viNkzvfC";
-  
-  
-
- 
 
 useEffect(()=>{
   WebFont.load({
@@ -61,7 +57,7 @@ useEffect(()=>{
   
   store.dispatch(loadUser());
  
-},[]);
+},[isAuthenticated,user]);
 
 window.addEventListener("contextmenu",(e)=> e.preventDefault());
 
