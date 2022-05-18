@@ -54,7 +54,10 @@
     "web-vitals": "^2.1.4",
     "webfontloader": "^1.6.28",
     "webpack": "^5.72.1",
-    "xhr2-cookies": "^0.9.1"
+    "xhr2-cookies": "^0.9.1",
+    "@babel/register": "^7.8.3",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4"
   },
   "scripts": {
     "dev": "react-scripts start",
